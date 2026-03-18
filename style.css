@@ -1,0 +1,270 @@
+
+#nav .navbar-brand{
+font-size: 1.8rem;
+font-weight: bold;
+color: #0e9d3e;
+padding: 8px 15px;
+margin-right: 20px;
+margin-left: 10px;
+transition: 0.3s;
+}
+
+#nav .navbar-brand:hover{
+color: #0f7939;
+transform: scale(1.05);
+}
+#nav .form-control{
+border-radius: 20px;
+padding: 6px 15px;
+width: 350px;
+transition: 0.3s;
+}
+
+#nav .form-control:focus{
+box-shadow: 0 0 6px rgba(12, 119, 37, 0.5);
+border-color:#0e9d3e;
+}
+#nav .btn-outline-success{
+border-radius: 20px;
+padding: 6px 15px;
+margin-left: 5px;
+transition: 0.3s;
+font-size: 1.5rem;
+}
+
+#nav .btn-outline-success:hover{
+background-color:#0e9d3e;
+border-color:#0e9d3e;
+color:white;
+}
+#nav .nav-link{
+padding:10px 15px;
+margin:0 5px;
+font-weight:500;
+border-radius:6px;
+transition:0.3s;
+font-size: 1.5rem;
+color: #0e9d3e;
+}
+#nav .nav-link:hover{
+background-color:#0e9d3e;
+color:white !important;
+}
+#nav .fa-circle-user{
+margin-left:10px;
+transition:0.3s;
+color:rgb(9, 75, 37);
+font-size: 2rem;
+}
+#nav .fa-circle-user:hover{
+    background-color:#0e9d3e;
+    color: white !important;
+}
+#nav .navbar-nav{
+margin-left:30px;
+}
+.img-fluid{
+    height: 550px;
+    width: 100%;
+}
+.about{
+    padding: 10px;margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about button{
+    color: #0f7939;
+    box-shadow: 0 0 6px rgba(12, 119, 37, 0.5);
+    border-color:#0e9d3e; 
+    border-radius: 8px;
+    padding: 6px 15px;
+    font-size: large;
+    transition: 0.3s;
+}
+.about button:hover{
+background-color:#0e9d3e;
+border-color:#0e9d3e;
+color:white;
+}
+
+.custom-breadcrumb{
+margin:0;
+display:flex;
+align-items:center;
+}
+
+.custom-breadcrumb a{
+text-decoration:none;
+color:#0e9d3e;
+font-weight:500;
+font-size:1.3rem;
+}
+
+.custom-breadcrumb .active{
+color:#0f7939;
+font-weight:600;
+font-size:1.3rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before{
+margin:0 8px;
+}
+
+
+.card-section{
+background:#f4f6f5;
+padding:30px;
+}
+.course-cards{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin:30px;
+}
+
+.course-card{
+background:#f8f9fa;
+padding:20px;
+text-align:center;
+border-radius:8px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.course-card h4{
+margin-bottom:10px;
+font-size:1.2rem;
+color: brown;
+}
+
+.course-card p{
+font-size:2rem;
+font-weight:bold;
+color:#0e9d3e;
+}
+
+@media (max-width:768px){
+.course-cards{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+.table td, .table th{
+border-top:none;
+border-bottom:1px solid #dee2e6;
+}
+
+.details-row{
+display:none;
+background:#f8f9fa;
+}
+.course-type{
+padding:4px 10px;
+border-radius:4px;
+font-size:0.9rem;
+font-weight:500;
+color:white;
+}
+
+.free{
+background-color:#0d6efd; 
+}
+
+.paid{
+background-color:#dc3545; 
+}
+
+
+/*mycourse css*/
+
+
+.search-box{
+margin-top:20px;
+}
+
+.search-box input{
+width:100%;
+padding:10px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+.mycourse-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-top:20px;
+}
+
+.mycourse-card{
+background:white;
+padding:15px;
+border-radius:8px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.mycourse-card:hover{
+transform: scale(1.05);
+box-shadow:0 8px 18px rgba(0,0,0,0.2);
+}
+
+.mycourse-card img{
+width:100%;
+border-radius:6px;
+}
+
+.mycourse-title{
+margin-top:10px;
+font-size:1.1rem;
+}
+
+.educator{
+font-size:0.9rem;
+color:gray;
+}
+
+.watch-time{
+font-size:0.85rem;
+}
+
+.progress-bar{
+height:8px;
+background:#e0e0e0;
+border-radius:4px;
+margin:10px 0;
+}
+
+.progress{
+height:8px;
+background:#0e9d3e;
+border-radius:4px;
+}
+
+.resume-btn{
+background:#0e9d3e;
+color:white;
+border:none;
+padding:6px 12px;
+border-radius:4px;
+}
+
+@media (max-width:768px){
+.mycourse-grid{
+grid-template-columns:1fr;
+}
+}
+
+/*progress*/
+
+.chart-box{
+margin-top:40px;
+width:400px;
+margin-left:auto;
+margin-right:auto;
+}
+#progressChart {
+    width: 300px !important;
+    height: 300px !important;
+    display: block;
+    margin: 0 auto;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Courses</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+
+        <div class="container-fluid">
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0 custom-breadcrumb">
+
+                <li class="breadcrumb-item">
+                <a href="DashBoard.html">Home</a>
+                </li>
+
+                <li class="breadcrumb-item active fw-bold">
+                My Courses
+                </li>
+
+                </ol>
+            </nav>
+
+        </div>
+    </nav>
+</header>
+
+<div class="container mt-5 pt-4">
+
+<div class="search-box">
+<input type="text" id="courseSearch" placeholder="Search your course here..." onkeyup="searchCourses()">
+</div>
+
+<h3 class="mt-4">Continue Watching</h3>
+
+</div>
+
+<div class="mycourse-grid" id="mycourseGrid">
+
+    <div class="mycourse-card">
+        <img src="image/javascript.jpg">
+        <h2 class="mycourse-title">JavaScript Basics</h2>
+        <p class="educator">By John Smith</p>
+        <p class="watch-time" id="watch-javascript">0 / 10 hours watched</p>
+        <div class="progress-bar">
+        <div class="progress" id="progress-javascript" ></div>
+        </div>
+        <button class="resume-btn" data-course="javascript">Resume</button>
+    </div>
+
+    <div class="mycourse-card">
+        <img src="image/html.jpg">
+        <h2 class="mycourse-title">HTML Fundamentals</h2>
+        <p class="educator">By Sarah Lee</p>
+        <p class="watch-time" id="watch-html">0 / 8 hours watched</p>
+        <div class="progress-bar">
+        <div class="progress" id="progress-html" ></div>
+        </div>
+        <button class="resume-btn" data-course="html">Resume</button>
+    </div>
+
+    <div class="mycourse-card">
+
+        <img src="image/images.jpg">
+        <h2 class="mycourse-title">CSS Layout & Design</h2>
+        <p class="educator">By Michael Brown</p>
+        <p class="watch-time" id="watch-css">0 / 7 hours watched</p>
+        <div class="progress-bar">
+        <div class="progress" id="progress-css" ></div>
+        </div>
+        <button class="resume-btn" data-course="css">Resume</button>
+
+    </div>
+
+    <div class="mycourse-card">
+        <img src="image/reactjs.jpg">
+        <h2 class="mycourse-title">React Development</h2>
+        <p class="educator">By Emily Davis</p>
+        <p class="watch-time" id="watch-react">0 / 12 hours watched</p>
+        <div class="progress-bar">
+        <div class="progress" id="progress-react" ></div>
+        </div>
+        <button class="resume-btn" data-course="react">Resume</button>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="mycourse.js"></script>
+
+
+</body>
+</html>

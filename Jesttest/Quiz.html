@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body{
+    font-family:Arial;
+    background:#f4f4f4;
+    margin:40px;
+    }
+
+    .container{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    h2{
+    text-align:center;
+    }
+
+    .question{
+    margin-bottom:20px;
+    }
+
+    .option{
+    display:block;
+    margin:5px 0;
+    }
+
+    button{
+    background:#0e9d3e;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:5px;
+    cursor:pointer;
+    }
+
+    button:hover{
+    background:#0c7f32;
+    }
+
+    #resultSection{
+    margin-top:25px;
+    padding:15px;
+    background:#f1f1f1;
+    border-radius:6px;
+    display:none;
+    }
+
+</style>
+</head>
+<body>
+   <header>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+
+        <div class="container-fluid">
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0 custom-breadcrumb">
+
+                <li class="breadcrumb-item">
+                <a href="../DashBoard.html">Home</a>
+                </li>
+
+                <li class="breadcrumb-item active fw-bold">
+                Quizzes
+                </li>
+
+                </ol>
+            </nav>
+
+        </div>
+    </nav>
+</header>
+<div class="container">
+
+<h2>Quiz</h2>
+
+<div id="quizContainer">
+Loading quiz...
+</div>
+
+<br>
+
+<button onclick="submitQuiz()">Submit Quiz</button>
+
+<div id="resultSection"></div>
+
+</div>
+<script src="quizscript.js"></script>
+</body>
+</html>

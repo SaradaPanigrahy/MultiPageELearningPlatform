@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Courses</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" >
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light" id="nav">
+
+    <div class="container-fluid">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0 custom-breadcrumb">
+            
+            <li class="breadcrumb-item">
+            <a href="DashBoard.html">Home</a>
+            </li>
+
+            <li class="breadcrumb-item active fw-bold" aria-current="page">
+            Explore Courses
+            </li>
+
+        </ol>
+        </nav>
+
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                <a class="nav-link" href="Progress.html">Overview</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="MyCourse.html">My Courses</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="Jesttest/Quiz.html">Quizzes</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="Profile.html">
+                <i class="fa-solid fa-circle-user" style="font-size:2rem"></i>
+                </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+    </nav>
+</header>
+<br><br>
+<section class="card-section">
+<div class="course-cards">
+
+    <div class="course-card">
+        <h4>Active Courses</h4>
+        <p id="activeCount">0</p>
+    </div>
+
+    <div class="course-card">
+        <h4>Upcoming Courses</h4>
+        <p id="upcomingCount">0</p>
+    </div>
+
+    <div class="course-card">
+        <h4>Free Courses</h4>
+        <p id="freeCount">0</p>
+    </div>
+
+    <div class="course-card">
+        <h4>Paid Courses</h4>
+        <p id="paidCount">0</p>
+    </div>
+
+</div>
+</section>
+<div class="container mt-4">
+
+    <!-- Category Filter -->
+    <div class="mb-3">
+        <label class="form-label">Filter by Category</label>
+        <select class="form-select w-auto" onchange="filterCourses(this.value)">
+            <option value="all">All</option>
+            <option value="programming">Programming</option>
+            <option value="design">Design</option>
+            <option value="business">Business</option>
+             <option value="frontend">FrontEnd</option>
+        </select>
+    </div>
+
+    <div class="table-responsive">
+
+        <table class="table table-hover">
+
+            <thead class="table-light">
+                <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Type</th>
+                <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="courseTable">
+
+                <tr data-category="programming">
+                <td>JavaScript Basics</td>
+                <td>Programming</td>
+                <td><span class="badge bg-success">Active</span></td>
+                <td><span class="course-type free">Free</span></td>
+                <td>
+                <button class="btn btn-sm btn-success" style="background-color: #0e9d3e;" onclick="toggleDetails(this)">
+                Show Details
+                </button>
+                </td>
+                </tr>
+
+                <tr class="details-row">
+                <td colspan="4">
+
+                <ol>
+                <li>Variables</li>
+                <li>Functions</li>
+                <li>Arrays</li>
+                <li>DOM Manipulation</li>
+                </ol>
+                <button class="btn btn-success btn-sm" style="background-color: #0e9d3e;">Enroll Now</button>
+                </td>
+                </tr>
+
+                <tr data-category="programming">
+                <td>C#</td>
+                <td>Programming</td>
+                <td><span class="badge bg-success">Active</span></td>
+                <td><span class="course-type paid">Paid</span></td>
+                <td>
+                <button class="btn btn-sm btn-success" style="background-color: #0e9d3e;" onclick="toggleDetails(this)">
+                Show Details
+                </button>
+                </td>
+                </tr>
+
+                <tr class="details-row">
+                <td colspan="4">
+
+                <ol>
+                <li>Variables</li>
+                <li>Functions</li>
+                <li>Arrays</li>
+                <li>OOPs Concept</li>
+                </ol>
+                <button class="btn btn-success btn-sm" style="background-color: #0e9d3e;">Enroll Now</button>
+                </td>
+                </tr>
+
+                 <tr data-category="frontend">
+                <td>HTML</td>
+                <td>FrontEnd</td>
+                <td><span class="badge bg-success">Active</span></td>
+                <td><span class="course-type free">Free</span></td>
+                <td>
+                <button class="btn btn-sm btn-success" style="background-color: #0e9d3e;" onclick="toggleDetails(this)">
+                Show Details
+                </button>
+                </td>
+                </tr>
+
+                <tr class="details-row">
+                <td colspan="4">
+
+                <ol>
+                <li>Text Formatting & Structure</li>
+                <li>Links & Navigation</li>
+                <li>Images & Media</li>
+                <li>Forms & User Input</li>
+                </ol>
+                <button class="btn btn-success btn-sm" style="background-color: #0e9d3e;">Enroll Now</button>
+                </td>
+                </tr>
+                <tr data-category="design">
+                <td>Graphic Design</td>
+                <td>Design</td>
+                <td><span class="badge bg-success">Active</span></td>
+                <td><span class="course-type paid">Paid</span></td>
+                <td>
+                <button class="btn btn-sm btn-success" style="background-color:#0e9d3e;" onclick="toggleDetails(this)">
+                Show Details
+                </button>
+                </td>
+                </tr>
+
+                <tr class="details-row">
+                <td colspan="4">
+
+                <ol>
+                <li>Design Principles</li>
+                <li>Adobe Photoshop Basics</li>
+                <li>Illustration Techniques</li>
+                <li>Brand Identity</li>
+                </ol>
+
+                <button class="btn btn-success btn-sm" style="background-color:#0e9d3e;">
+                Enroll Now
+                </button>
+
+                </td>
+                </tr>
+
+
+
+                <tr data-category="design">
+                <td>CSS</td>
+                <td>Design</td>
+                <td><span class="badge bg-success">Active</span></td>
+                  <td><span class="course-type free">Free</span></td>
+                <td>
+                <button class="btn btn-sm btn-success" style="background-color: #0e9d3e;" onclick="toggleDetails(this)">
+                Show Details
+                </button>
+                </td>
+                </tr>
+
+                <tr class="details-row">
+                <td colspan="4">
+
+                <ol>
+                <li>Box Model</li>
+                <li>Responsive Typography</li>
+                <li>Layout Design</li>
+                <li>Styling and Visual Effect</li>
+                </ol>
+
+                <button class="btn btn-success btn-sm" style="background-color: #0e9d3e;">Enroll Now</button>
+
+                </td>
+                </tr>
+
+                <tr data-category="frontend">
+                <td>Advanced JavaScript</td>
+                <td>FrontEnd</td>
+                <td><span class="badge bg-primary">Upcoming</span></td>
+                <td><span class="course-type paid">Paid</span></td>
+                <td>
+                <button class="btn btn-sm btn-success" style="background-color:#0e9d3e;" onclick="toggleDetails(this)">
+                Show Details
+                </button>
+                </td>
+                </tr>
+
+                <tr class="details-row">
+                <td colspan="4">
+
+                <ol>
+                <li>Closures</li>
+                <li>Async JavaScript</li>
+                <li>Promises & Fetch API</li>
+                <li>ES6 Features</li>
+                </ol>
+
+                <button class="btn btn-success btn-sm" style="background-color:#0e9d3e;">
+                Enroll Now
+                </button>
+
+                </td>
+                </tr>
+
+                <tr data-category="design">
+                <td>UI Design</td>
+                <td>Design</td>
+                <td><span class="badge bg-primary">Upcoming</span></td>
+                <td><span class="course-type paid">Paid</span></td>
+                <td>
+                <button class="btn btn-sm btn-success" style="background-color: #0e9d3e;" onclick="toggleDetails(this)">
+                Show Details
+                </button>
+                </td>
+                </tr>
+
+                <tr class="details-row">
+                <td colspan="4">
+
+                <ol>
+                <li>Color Theory</li>
+                <li>Typography</li>
+                <li>Layout Design</li>
+                </ol>
+
+                <button class="btn btn-success btn-sm" style="background-color: #0e9d3e;">Enroll Now</button>
+
+                </td>
+                </tr>
+                
+                <tr data-category="business">
+                <td>Digital Marketing</td>
+                <td>Business</td>
+                <td><span class="badge bg-primary">Upcoming</span></td>
+                <td><span class="course-type free">Free</span></td>
+                <td>
+                <button class="btn btn-sm btn-success" style="background-color:#0e9d3e;" onclick="toggleDetails(this)">
+                Show Details
+                </button>
+                </td>
+                </tr>
+
+                <tr class="details-row">
+                <td colspan="4">
+
+                <ol>
+                <li>Marketing Fundamentals</li>
+                <li>SEO Basics</li>
+                <li>Social Media Marketing</li>
+                <li>Email Campaigns</li>
+                </ol>
+
+                <button class="btn btn-success btn-sm" style="background-color:#0e9d3e;">
+                Enroll Now
+                </button>
+
+                </td>
+                </tr>
+
+                <tr data-category="frontend">
+                <td>React Development</td>
+                <td>FrontEnd</td>
+                <td><span class="badge bg-primary">Upcoming</span></td>
+                <td><span class="course-type paid">Paid</span></td>
+                <td>
+                <button class="btn btn-sm btn-success" style="background-color:#0e9d3e;" onclick="toggleDetails(this)">
+                Show Details
+                </button>
+                </td>
+                </tr>
+
+                <tr class="details-row">
+                <td colspan="4">
+
+                <ol>
+                <li>React Components</li>
+                <li>State and Props</li>
+                <li>Hooks</li>
+                <li>Building Single Page Apps</li>
+                </ol>
+
+                <button class="btn btn-success btn-sm" style="background-color:#0e9d3e;">
+                Enroll Now
+                </button>
+
+                </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
